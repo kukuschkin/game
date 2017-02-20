@@ -61,7 +61,7 @@ var mainState = {
     },
     
     
-    // Bringt den Vogel zum Fliegen
+    // Bringt den Vogel zum Fliegen 
     jump: function() {
         // Fallgeschwindigkeit
         this.bird.body.velocity.y = -300;
@@ -114,7 +114,7 @@ var mainState = {
     
     addRowOfPipes: function() {
         // Wahlt eine Nummer zwischen 1 bis 6
-        var hole = Math.floor(Math.random()*6 );
+        var hole = Math.floor(Math.random()*6+1 );
         
         this.score += 1;
         this.labelScore.text = this.score;  
