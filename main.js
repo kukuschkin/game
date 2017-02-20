@@ -43,6 +43,10 @@ var mainState = {
         this.pipesN = game.add.group();
         
         this.timer = game.time.events.loop(1500, this.addRowOfPipes, this); 
+        
+        this.score = 0;
+            this.labelScore = game.add.text(20, 20, "0", 
+            { font: "30px Arial", fill: "#ffffff" });   
     },
 
 
@@ -111,6 +115,9 @@ var mainState = {
     addRowOfPipes: function() {
         // Wahlt eine Nummer zwischen 1 bis 6
         var hole = Math.floor(Math.random()*6 +1);
+        
+        this.score += 1;
+        this.labelScore.text = this.score;  
 
         // Add the  pipes 
         // With one big hole at position 'hole' and 'hole + 1'
