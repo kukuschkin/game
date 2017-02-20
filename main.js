@@ -121,7 +121,7 @@ var mainState = {
 
         // Add the  pipes 
         // With one big hole at position 'hole' and 'hole + 1'
-        for (var i = 0; i < 10; i++)
+        for (var i = 0; i < 9; i++)
             if (i != hole && i != hole + 1) 
                 this.addOnePipe(400, i * 50)
                 this.NaddOnePipe(400, (hole-1)*50)
